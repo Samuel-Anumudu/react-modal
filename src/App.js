@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { ProductPopup } from "./components/productPopup/popup"
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [show_popup, toggleProductPopup] = useState(false);
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sit sunt eius fugiat architecto blanditiis repudiandae voluptatum dolore dolor ad ab officiis necessitatibus numquam perferendis. Eveniet molestias debitis vitae dignissimos?</h1>
+      <button onClick={({ target }) => { toggleProductPopup(true) }}>Show / Hide Popup</button>
+
+      {show_popup === true ? (< ProductPopup onCloseModal={(data) => { toggleProductPopup(false) }}></ ProductPopup>) : ""}
     </div>
   );
 }

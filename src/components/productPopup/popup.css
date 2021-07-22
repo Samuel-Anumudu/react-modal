@@ -1,0 +1,40 @@
+.text-red {
+    color: red
+}
+
+.product-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    padding-top: 40px;
+}
+
+.product-modal {
+    margin: 0 auto;
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.col_1 {
+    background: rgb(212, 23, 165);
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.col_2 {
+    background: green;
+}
